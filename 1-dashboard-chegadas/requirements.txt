@@ -1,0 +1,6 @@
+# Versões usadas na reprodução de 30/09/2026 (Python 3.11)
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+plotly==7.1.0
+openpyxl==3.1.5

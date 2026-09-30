@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Se usar este material, cite-o conforme abaixo."
+title: "Planejamento agregado de capacidade na logística reversa da Green Mining: códigos e materiais de apoio do TCC"
+version: 1.0.0
+date-released: 2026-09-30
+license: MIT
+repository-code: "https://github.com/fernandoanr/tcc-green-mining-capacidade"
+authors:
+  - family-names: Rodrigues
+    given-names: Fernando Andrade
+  - family-names: Pinceli
+    given-names: Gabriel Camargo
+  - family-names: Ascenção
+    given-names: Isabella
+  - family-names: Barbosa
+    given-names: Kaio Rocha
+keywords:
+  - planejamento agregado de capacidade
+  - RCCP
+  - logística reversa
+  - simulação de eventos discretos
+  - SIMUL8

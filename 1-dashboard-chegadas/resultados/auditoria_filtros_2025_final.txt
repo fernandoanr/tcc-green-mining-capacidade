@@ -1,0 +1,21 @@
+Aba lida: Consolidado
+Linhas carregadas da planilha original: 116816
+Campo lógico 'data' -> coluna original 'Data'
+Campo lógico 'horario' -> coluna original 'Horário'
+Campo lógico 'material' -> coluna original 'Material'
+Campo lógico 'familia' -> coluna original 'Família'
+Campo lógico 'peso' -> coluna original 'Peso (Kg)'
+Campo lógico 'destino' -> coluna original 'Destino'
+Campo lógico 'coletor' -> coluna original 'Coletor'
+Campo lógico 'status' -> coluna original 'Status'
+Campo lógico 'origem' -> coluna original 'Origem'
+Campo lógico 'lancamento' -> coluna original 'Lancamento'
+Campo lógico 'ctr' -> coluna original 'N. de CTR'
+Linhas com DataHora inválida na base original: 0
+Linhas excluídas por estarem fora de 2025: 61203
+Linhas brutas mantidas no recorte 2025: 55613
+REGRA TCC: todos os cálculos, auditorias e ajustes abaixo usam somente 2025.
+Duplicidades exatas detectadas dentro de 2025 (auditoria): 38
+Duplicidades exatas não removidas automaticamente.
+Linhas removidas pelos filtros de HUB/família/peso dentro de 2025: 23265
+Linhas finais no escopo do TCC (2025): 32348

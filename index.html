@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCC Green Mining — Capacidade</title>
+<meta name="description" content="Códigos e ferramentas do TCC sobre planejamento agregado de capacidade na logística reversa da Green Mining (Instituto Mauá de Tecnologia, 2026).">
+<style>
+  :root { --bg:#f4f7f4; --card:#ffffff; --ink:#0f241d; --muted:#4a5d55; --line:#d8e3dc; --accent:#0b5b41; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e1714; --card:#15221d; --ink:#e6efe9; --muted:#9db3a8; --line:#26382f; --accent:#5fd0a0; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:48px 16px 64px; }
+  .eyebrow { color:var(--muted); font-size:.85rem; letter-spacing:.04em; text-transform:uppercase; margin:0 0 8px; }
+  h1 { font-size:clamp(1.5rem,3.6vw,2.1rem); line-height:1.2; margin:0 0 12px; }
+  .lead { color:var(--muted); margin:0 0 32px; max-width:62ch; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  a.card { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; color:inherit; text-decoration:none; transition:border-color .15s; }
+  a.card:hover, a.card:focus-visible { border-color:var(--accent); outline:none; }
+  .card h2 { font-size:1.05rem; margin:0 0 6px; }
+  .card p { margin:0; color:var(--muted); font-size:.93rem; }
+  .card .go { display:inline-block; margin-top:12px; color:var(--accent); font-weight:600; font-size:.9rem; }
+  footer { margin-top:40px; color:var(--muted); font-size:.85rem; border-top:1px solid var(--line); padding-top:16px; }
+  footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">TCC · Engenharia de Produção · Instituto Mauá de Tecnologia · 2026</p>
+  <h1>Planejamento agregado em sistemas de logística reversa: aplicação a Green Mining</h1>
+  <p class="lead">Ferramentas e códigos citados no Apêndice C do trabalho. A calculadora e o dashboard abrem direto no navegador. O código-fonte, os testes e a documentação estão no repositório.</p>
+  <div class="grid">
+    <a class="card" href="2-rccp/calculadora-rccp-offline.html">
+      <h2>Calculadora de capacidade (RCCP)</h2>
+      <p>Carga, capacidade, utilização e gargalo do transporte, dos centros de coleta e do hub, com cenários de 2026 a 2030.</p>
+      <span class="go">Abrir calculadora →</span>
+    </a>
+    <a class="card" href="1-dashboard-chegadas/dashboard_chegadas_2025.html">
+      <h2>Dashboard de chegadas 2025</h2>
+      <p>Tratamento da base, distribuições de intervalo entre chegadas e parâmetros calibrados para o SIMUL8.</p>
+      <span class="go">Abrir dashboard →</span>
+    </a>
+    <a class="card" href="https://github.com/fernandoanr/tcc-green-mining-capacidade">
+      <h2>Código-fonte</h2>
+      <p>Motor do RCCP, 48 testes, rotinas em Python, lógica do SIMUL8 e documentação.</p>
+      <span class="go">Ver no GitHub →</span>
+    </a>
+  </div>
+  <footer>
+    Fernando Andrade Rodrigues, Gabriel Camargo Pinceli, Isabella Ascenção e Kaio Rocha Barbosa · Orientação da Profa. Dra. Joyce Zampirolli Scrivano.<br>
+    Dados operacionais cedidos pela Green Mining para uso acadêmico e publicados apenas de forma agregada.
+  </footer>
+</main>
+</body>
+</html>

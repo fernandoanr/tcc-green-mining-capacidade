@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+# Base original e saídas com registros individuais não devem ser publicadas
+Base_Chegadas*.xlsx
+base_eventos_agrupados*.csv
+saida/

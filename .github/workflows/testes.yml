@@ -1,0 +1,42 @@
+name: Testes do RCCP
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Testes automatizados do motor (48)
+        working-directory: 2-rccp/src
+        run: node --test rccp-model.test.cjs
+      - name: Reprodução do cenário-base
+        working-directory: 2-rccp/src
+        run: node rccp-current-scenario.cjs > /dev/null
+      - name: Auditoria das sensibilidades
+        working-directory: 2-rccp/src
+        run: node rccp-sensitivity-audit.cjs > /dev/null
+      - name: Calculadora offline sincronizada com o código-fonte
+        run: |
+          cp 2-rccp/calculadora-rccp-offline.html /tmp/antes.html
+          node 2-rccp/reprodutibilidade/update-offline-bundle.mjs > /dev/null
+          python3 - <<'PY'
+          import re, json, base64, gzip, hashlib
+          def conteudo(p):
+              s = open(p, encoding="utf-8").read()
+              m = re.search(r'<script type="__bundler/manifest">\s*(\{.*?\})\s*</script>', s, re.S)
+              man = json.loads(m.group(1))
+              out = {}
+              for k, v in man.items():
+                  d = base64.b64decode(v["data"])
+                  out[k] = hashlib.sha256(gzip.decompress(d) if v.get("compressed") else d).hexdigest()
+              resto = re.sub(r'<script type="__bundler/manifest">.*?</script>', "", s, flags=re.S)
+              return out, hashlib.sha256(resto.encode()).hexdigest()
+          assert conteudo("/tmp/antes.html") == conteudo("2-rccp/calculadora-rccp-offline.html"), "calculadora offline desatualizada"
+          print("Calculadora offline idêntica ao código-fonte")
+          PY
